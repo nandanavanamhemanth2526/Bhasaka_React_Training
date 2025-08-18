@@ -1,0 +1,69 @@
+:root {
+  color-scheme: light dark;
+  background-color: #242424;
+}
+
+#tile_cards_container{
+  border: 2px solid white;
+  height: 500px;
+  width: 300px;
+  overflow: hidden;
+  padding: 10px;
+  margin: 3px;
+    
+}
+
+#tile_cards_container img{
+  width: 100%;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#view_type_btn {
+  margin-bottom: 20px;
+  margin-left: 1240px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+button:hover{
+  color: black;
+  background-color: beige;
+}
+
+#list_cards_container{
+  border: 2px solid white;
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; 
+  gap: 20px;
+  padding: 10px;
+}
+
+#img_container{
+  width: 300px;
+  height: 200px;
+}
+
+#img_container img{
+  width: 100%;
+}
+
+
+.text_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#heading{
+  text-align: center;
+}
+
+#btn_container{
+
+}
