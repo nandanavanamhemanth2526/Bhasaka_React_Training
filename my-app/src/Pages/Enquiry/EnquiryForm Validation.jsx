@@ -1,21 +1,40 @@
 import { useState } from "react";
+import axios from "axios";
 
 const EnquiryFormValidation = () => {
 
     const [errors, setErrors] = useState({nameError : false, mobNoError : false, messageError:false});
 
-    const [enquiryFormData, setEnquiryFormData] = useState({name : "" ,mobNo : "", message : "",enquiryDepartment: "", otherDepartment : ""});
+    const [enquiryFormData, setEnquiryFormData] = useState({name : "" ,mobNo : "", message : "",enquiryDepartment: "TECHNICAL", otherDepartment : ""});
 
-    const onSubmitClick = (e) => {
+    const onSubmitClick = async (e) => {
        e.preventDefault();
-       fetch("https://jsonplaceholder.typicode.com/posts" , {
-        method : "POST",
-        body: JSON.stringify(enquiryFormData)
-       }).then((res) => {
-        console.log(res);
-       }).catch=((err) => {
-        console.log("An Error occur while processing the data",err);
-       })
+    //    fetch("https://jsonplaceholder.typicode.com/posts" , {
+    //     method : "POST",
+    //     body: JSON.stringify(enquiryFormData)
+    //    }).then((res) => {
+    //     return res.json()
+    //    }).then(data => {
+    //     console.log(data);
+    //     alert("Details got submitted. Our teams team will reach out to you. Thank You")
+    //     setEnquiryFormData({name : "" ,mobNo : "", message : "",enquiryDepartment: "TECHNICAL", otherDepartment : ""});
+    //    })
+    //    .catch=((err) => {
+    //     console.log("An Error occur while processing the data",err);
+    //    })
+
+        // axios.post("https://jsonplaceholder.typicode.com/posts",enquiryFormData)
+        // .then((res) => console.log(res.data))
+        // .catch(err => console.log("Error calling api"));
+
+        try{
+            const res = await axios.post("https://jsonplaceholder.typicode.com/posts",enquiryFormData);
+            console.log(res.data);
+        } catch(err){
+            console.log("Error while processing the api call");
+        }
+        
+        
     }
 
     const onInputChange = (e) => {
@@ -64,7 +83,7 @@ const EnquiryFormValidation = () => {
                     </select>
                 </div>
                 {
-                    enquiryFormData.enquiryDepartment === "OTHERS" && <div><input id="otherDepartment" onChange={onInputChange} type="text" placeholder="Please Enter the Department"/></div>
+                    enquiryFormData.enquiryDepartment === "OTHERS" && <div><input id="otherDepartment" onChange={onInputChange} type="text" placeholder="Please Enter the Department" required/></div>
                 }
                 <button>Submit</button>
             </form>
