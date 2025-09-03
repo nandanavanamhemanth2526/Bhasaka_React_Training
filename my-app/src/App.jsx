@@ -1,5 +1,5 @@
 import './App.css'
-import EnquiryOptimized from './Pages/Enquiry/EnquiryOptimized'
+import EnquiryFormValidation from './Pages/Enquiry/EnquiryForm Validation'
 
 function App() {
 
@@ -9,7 +9,8 @@ function App() {
       {/* <Enquiry />
       <EnquiryUncontrolled /> */}
       {/* <EnquiryControlled /> */}
-      <EnquiryOptimized />
+      {/* <EnquiryOptimized /> */}
+      <EnquiryFormValidation />
     </>
   )
 }
