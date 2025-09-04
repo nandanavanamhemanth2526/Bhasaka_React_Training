@@ -1,6 +1,7 @@
 import { useState } from "react";
 import BlogCards from "../Components/BlogCards";
 
+
 const Home = () => {
 
     const wondersOfTheWorld = [

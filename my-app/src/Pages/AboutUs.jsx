@@ -1,6 +1,6 @@
 import ContactUs from "./ContactUS";
 
-const AbountUS = () => {
+const AboutUS = () => {
     return(
         <>
             <h1>This is an ouptup from About US Page</h1>
@@ -9,4 +9,4 @@ const AbountUS = () => {
     );
 }
 
-export default AbountUS;
+export default AboutUS;

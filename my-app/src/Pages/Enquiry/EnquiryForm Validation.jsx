@@ -26,15 +26,21 @@ const EnquiryFormValidation = () => {
         // axios.post("https://jsonplaceholder.typicode.com/posts",enquiryFormData)
         // .then((res) => console.log(res.data))
         // .catch(err => console.log("Error calling api"));
+        // try{
+        //     const res = await axios.post("https://jsonplaceholder.typicode.com/posts",enquiryFormData,{headers : {client_id : "12345"}});
+        //     console.log(res.data);
+        //     alert("Thank Youfor submitting your query. Our team will get back to you as soon as possible");
+        //     setEnquiryFormData({name : "" ,mobNo : "", message : "",enquiryDepartment: "TECHNICAL", otherDepartment : ""});
+        // } catch(err){
+        //     console.log("Error while processing the api call");
+        // }
 
         try{
-            const res = await axios.post("https://jsonplaceholder.typicode.com/posts",enquiryFormData);
+            const res = await axios.get("https://jsonplaceholder.typicode.com/posts")
             console.log(res.data);
-        } catch(err){
-            console.log("Error while processing the api call");
+        } catch(err) {
+            console.log("Error while fetching the data from api");
         }
-        
-        
     }
 
     const onInputChange = (e) => {
@@ -76,7 +82,7 @@ const EnquiryFormValidation = () => {
                 </div>
                 <div>
                     <label>Enquiry Department</label>
-                    <select id="enquiryDepartment" onChange={onInputChange}>
+                    <select value={enquiryFormData.enquiryDepartment} id="enquiryDepartment" onChange={onInputChange}>
                         <option value="TECHNICAL">Technical</option>
                         <option value="SALES">Sales</option>
                         <option value="OTHERS">Others</option>
