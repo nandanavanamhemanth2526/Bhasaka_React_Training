@@ -1,5 +1,5 @@
 import { useState } from "react";
-import BlogCards from "../Components/BlogCards";
+import BlogCards from "../../Components/BlogCards/BlogCards";
 
 
 const Home = () => {
@@ -60,6 +60,7 @@ const Home = () => {
 
     return (
         <>
+        {/* <Header /> */}
             <h1 id="heading">HOME PAGE</h1>
             <button id="view_type_btn" onClick={onViewTypeClick}>{viewType === 'List' ? 'Tile' : 'List'} View</button>
             <div id="cards">

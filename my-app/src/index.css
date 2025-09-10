@@ -64,6 +64,8 @@ button:hover{
   text-align: center;
 }
 
-#btn_container{
-
+a{
+  text-decoration: none;
+  color: inherit;
+  margin-right: 30px;
 }
