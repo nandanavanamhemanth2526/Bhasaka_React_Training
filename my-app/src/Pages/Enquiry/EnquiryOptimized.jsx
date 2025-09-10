@@ -14,7 +14,7 @@ const EnquiryOptimized = () => {
 
     const onSubmitClick = (e) => {
        e.preventDefault();
-       console.log(enquiryFormData);
+    //    console.log(enquiryFormData);
     }
 
     const onNameChange = (e) => {

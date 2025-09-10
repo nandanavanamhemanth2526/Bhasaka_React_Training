@@ -13,7 +13,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import Login from './Pages/Login/Login';
 
 const router = createBrowserRouter([
-     {
+     { 
         element : <Layout/>,
         children : [
           {

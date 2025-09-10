@@ -37,7 +37,7 @@ const EnquiryFormValidation = () => {
 
         try{
             const res = await axios.get("https://jsonplaceholder.typicode.com/posts")
-            console.log(res.data);
+            // console.log(res.data);
         } catch(err) {
             console.log("Error while fetching the data from api");
         }

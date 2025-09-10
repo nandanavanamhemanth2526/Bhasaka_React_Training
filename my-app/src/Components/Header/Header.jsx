@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { AppContext } from "../AppContextProvider/AppContextProvider";
 import { useContext } from "react";
+import styles from "./Header.module.css"
 
 const Header = () => {
 
@@ -20,7 +21,7 @@ const Header = () => {
                 <Link to="/enquiry"><li>Enquiry</li></Link>
                 <Link to="/login"><li>Login</li></Link>
                 {
-                    ctx.state.isLoggedIn && <li style={{fontWeight: "bold"}}>{ctx.state.userName}</li>
+                    ctx.state.isLoggedIn && <li id={styles["userName"]}>{ctx.state.userName}</li>
                 }
             </ul>
         </div>

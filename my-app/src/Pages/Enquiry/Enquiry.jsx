@@ -1,9 +1,9 @@
 const Enquiry = () => {
     const onSubmitClick = (e) => {
         e.preventDefault();
-        console.log(e.target.name.value);
-        console.log(e.target.mobNo.value);
-        console.log(e.target.message.value);
+        // console.log(e.target.name.value);
+        // console.log(e.target.mobNo.value);
+        // console.log(e.target.message.value);
     }
     return(
         <div>
