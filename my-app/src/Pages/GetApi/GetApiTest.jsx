@@ -4,8 +4,9 @@ import UserData from "../../Components/UserData/UserData";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../../Components/AppContextProvider/AppContextProvider";
+import ArticleDetails from "../ArticleDetails/ArticleDetails";
 
-const GetApiTest = () => {
+const GetApiTest = (props) => {
 
     const [userData, setUserData] = useState([]);
 
@@ -34,7 +35,7 @@ const GetApiTest = () => {
         <>
             {   
                 ctx.state.articleList.map((user) => (
-                  <Link to="/articles/:articleId"><UserData title={user.title} body={user.body} id={user.id} userId={user.userId}/></Link>
+                  <UserData title={user.title} body={user.body} id={user.id} userId={user.userId}/>
                 ))
             }
             

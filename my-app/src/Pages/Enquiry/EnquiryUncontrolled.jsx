@@ -7,9 +7,9 @@ const EnquiryUncontrolled = () => {
 
     const onSubmitClick = (e) => {
         e.preventDefault();
-        console.log(nameRef.current.value);
-        console.log(mobNoRef.current.value);
-        console.log(messageRef.current.value);
+        // console.log(nameRef.current.value);
+        // console.log(mobNoRef.current.value);
+        // console.log(messageRef.current.value);
     }
     return(
         <div>
